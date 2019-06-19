@@ -1,0 +1,68 @@
+{
+    "dataset_reader": {
+        "type": "open_nre_nyt_reader",
+        "token_indexers": {
+            "byte_pairs": {
+                "type": "tre_byte_pair_indexer",
+                "model_path": "./openai-finetune-lm.tar.gz",
+                "tokens_to_add": [
+                    "__start__",
+                    "__del1__",
+                    "__del2__",
+                    "__clf__",
+                    "__mask__"
+                ]
+            }
+        }
+    },
+    "iterator": {
+        "type": "bag",
+        "batch_size": 16,
+        "biggest_batch_first": true,
+        "maximum_samples_per_batch": [
+            "byte_pairs",
+            2000
+        ],
+        "sorting_keys": [
+            [
+                "sentence",
+                "byte_pairs"
+            ]
+        ]
+    },
+    "model": {
+        "type": "mitre",
+        "dropout": 0.2,
+        "entity_dropout": 0,
+        "language_model_weight": 0.5,
+        "openai_model_path": "./openai-finetune-lm.tar.gz",
+        "requires_grad": true,
+        "selector": "attention",
+        "tokens_to_add": [
+            "__start__",
+            "__del1__",
+            "__del2__",
+            "__clf__",
+            "__mask__"
+        ]
+    },
+    "train_data_path": "./data/open_nre_nyt/train.json",
+    "trainer": {
+        "cuda_device": 0,
+        "num_epochs": 3,
+        "optimizer": {
+            "type": "openai_adam",
+            "b1": 0.9,
+            "b2": 0.999,
+            "e": 1e-08,
+            "l2": 0.01,
+            "lr": 6.25e-05,
+            "max_grad_norm": 1,
+            "schedule": "warmup_linear",
+            "t_total": 125000,
+            "vector_l2": true,
+            "warmup": 0.002
+        },
+        "validation_metric": "+not_na_accuracy"
+    }
+}

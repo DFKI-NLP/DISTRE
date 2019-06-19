@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Intellij
+.idea
+.idea_modules
+!.idea/codeStyleSettings.xml
+venv
+
+# Cached files
+*.pickle
+*.pickle.gz
+*.*~
+Dockerfile~
+
+# Markers
+*.pid
+*.cid
+
+# Logs
+*.log
+*.logs
+
+# Mac
+*.DS_Store
+
+# VS Code
+.vscode
