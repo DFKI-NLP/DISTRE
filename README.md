@@ -1,7 +1,7 @@
 # Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction
 
 This repository contains the code of our paper:  
-[Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction](https://arxiv.org/)  
+[Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction](https://arxiv.org/abs/1906.08646)  
 Christoph Alt, Marc Hübner, Leonhard Hennig
 
 
@@ -18,6 +18,11 @@ First, clone the repository to your machine and install the requirements with th
 
 ```bash
 pip install -r requirements.txt
+```
+
+Second, download the [OpenAI GPT archive](https://cloud.dfki.de/owncloud/index.php/s/kKdpoaGikWnL4tn/download) (containing all model related files):
+```
+wget --content-disposition https://cloud.dfki.de/owncloud/index.php/s/kKdpoaGikWnL4tn/download
 ```
 
 ## Prepare the data
