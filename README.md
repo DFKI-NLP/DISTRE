@@ -1,7 +1,7 @@
 # Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction
 
 This repository contains the code of our paper:  
-[Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction](https://arxiv.org/abs/1906.08646)  
+[Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction](https://www.aclweb.org/anthology/P19-1134)  
 Christoph Alt, Marc Hübner, Leonhard Hennig
 
 
@@ -88,11 +88,18 @@ CUDA_VISIBLE_DEVICES=0 python ./experiments/utils/pr_curve_and_predictions.py \
 If you use our code in your research or find our repository useful, please consider citing our work.
 
 ```
-@InProceedings{alt_improving_2019,
-  title = {Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction},
-  author = {Alt, Christoph and H\"{u}bner, Marc and Hennig, Leonhard},
-  booktitle={Proceedings of ACL 2019},
-  year={2019}
+@inproceedings{alt-etal-2019-fine,
+    title = "Fine-tuning Pre-Trained Transformer Language Models to Distantly Supervised Relation Extraction",
+    author = {Alt, Christoph  and
+      H{\"u}bner, Marc  and
+      Hennig, Leonhard},
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P19-1134",
+    pages = "1388--1398",
 }
 ```
 
