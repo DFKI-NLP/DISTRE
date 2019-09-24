@@ -30,7 +30,7 @@ We evaluate our model on the [NYT dataset](http://www.riedelcastro.org//publicat
 
 Follow the OpenNRE instructions for creating the NYT dataset in JSON format:
 
-1) download the [nyt.tar file]().
+1) download the [nyt.tar file](https://github.com/thunlp/OpenNRE#provided-data).
 2) extract the archive with: `tar -xvf nyt.tar`
 3) create the protobuf files: `protoc --proto_path=. --python_out=. Document.proto`
 4) convert the protobuf files to json: `python protobuf2json.py .`
