@@ -20,7 +20,7 @@ First, clone the repository to your machine and install the requirements with th
 pip install -r requirements.txt
 ```
 
-Second, download the [OpenAI GPT archive](https://cloud.dfki.de/owncloud/index.php/s/kKdpoaGikWnL4tn/download) (containing all model related files):
+Second, download the [OpenAI GPT archive](https://dfkide-my.sharepoint.com/:u:/g/personal/lehe02_dfki_de/EUzPdbmAk8BMoM_fFDsMiJ4BHawtbZLMgIZQWTyMa4csdQ?Web=0&Download=1) (containing all model related files):
 ```
 wget -O openai-finetune-lm.tar.gz "https://dfkide-my.sharepoint.com/:u:/g/personal/lehe02_dfki_de/EUzPdbmAk8BMoM_fFDsMiJ4BHawtbZLMgIZQWTyMa4csdQ?Web=0&Download=1"
 ```
