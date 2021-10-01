@@ -1,3 +1,5 @@
 allennlp==0.7.1
 fire
+scikit-learn==0.22.2
+overrides==3.1.0
 

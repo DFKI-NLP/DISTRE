@@ -22,12 +22,26 @@ pip install -r requirements.txt
 
 Second, download the [OpenAI GPT archive](https://cloud.dfki.de/owncloud/index.php/s/kKdpoaGikWnL4tn/download) (containing all model related files):
 ```
-wget --content-disposition https://cloud.dfki.de/owncloud/index.php/s/kKdpoaGikWnL4tn/download
+wget -O openai-finetune-lm.tar.gz "https://dfkide-my.sharepoint.com/:u:/g/personal/lehe02_dfki_de/EUzPdbmAk8BMoM_fFDsMiJ4BHawtbZLMgIZQWTyMa4csdQ?Web=0&Download=1"
+```
+The model should be placed in the root folder of the project.
+
+Note: The original model params are available here: https://github.com/openai/finetune-transformer-lm/tree/master/model . You can also download from there and then create a single archive file with:
+```
+tar cvzf openai-finetune-lm.tar.gz model/
 ```
 
 ## Prepare the data
 We evaluate our model on the [NYT dataset](http://www.riedelcastro.org//publications/papers/riedel10modeling.pdf) and use the version provided by [OpenNRE](https://github.com/thunlp/OpenNRE).
 
+Since the original data is not available anymore as JSON on OpenNRE, please download our cached copy:
+```
+wget -O opennre-nyt10.tgz "https://dfkide-my.sharepoint.com/:u:/g/personal/lehe02_dfki_de/EcCAEQhsKYNHlqoFq8m-3HgBbllwovMmjZjozqyTylh52w?Web=0&Download=1"
+tar xvzf opennre-nyt10.tgz
+```
+This creates a folder "data/open_nre_nyt" containing train.json and test.json.
+
+Outdated:
 Follow the OpenNRE instructions for creating the NYT dataset in JSON format:
 
 1) download the [nyt.tar file](https://github.com/thunlp/OpenNRE#provided-data).
@@ -62,14 +76,14 @@ The model(s) we trained on NYT to produce our paper results can be found here:
 
 | Dataset  | Masking Mode    | AUC    | Download                                                                    |
 | -------- | --------------- | ------ | --------------------------------------------------------------------------- |
-| NYT      | None            | 0.422  | [Link](https://cloud.dfki.de/owncloud/index.php/s/jJit9giM325MfJA/download) |
+| NYT      | None            | 0.422  | [Link](https://dfkide-my.sharepoint.com/:u:/g/personal/lehe02_dfki_de/ESnHZWbh-KtLgS8XVFeQbtIBTHVDn7u3Ekw7u6ysmgzvSw?Web=0&Download=1) |
 
 ### Download and extract model files
 
 Download the archive corresponding to the model you want to evaluate (links in the table above).
 
 ```bash
-wget --content-disposition <DOWNLOAD URL>
+wget -O model_lm05_wu2_do2_bs16_att.tar.gz "https://dfkide-my.sharepoint.com/:u:/g/personal/lehe02_dfki_de/ESnHZWbh-KtLgS8XVFeQbtIBTHVDn7u3Ekw7u6ysmgzvSw?Web=0&Download=1"
 ```
 
 ### Run evaluation
